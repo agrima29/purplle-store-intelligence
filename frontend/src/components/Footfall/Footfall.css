@@ -1,0 +1,56 @@
+.footfall-container {
+  margin-top: 50px;
+}
+
+.section-header {
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  color: rgba(255,255,255,0.7);
+}
+
+.footfall-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 24px;
+}
+
+.footfall-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.footfall-card:hover {
+  transform: translateY(-6px);
+}
+
+.footfall-icon {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.footfall-card h3 {
+  margin-bottom: 15px;
+}
+
+.footfall-value {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footfall-desc {
+  color: rgba(255,255,255,0.7);
+}

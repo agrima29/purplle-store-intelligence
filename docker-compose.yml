@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  pipeline:
+    build: .
+    command: python -m pipeline.runner
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DB_PATH=/app/data/events.db
+      - VIDEO_DIR=/app/data/videos
+      - SALES_CSV=/app/data/sales/Brigade_Bangalore_10_April_26.csv
+      - MODEL_PATH=/app/yolov8n.pt
+
+  api:
+    build: .
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DB_PATH=/app/data/events.db
+      - SALES_CSV=/app/data/sales/Brigade_Bangalore_10_April_26.csv
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    healthcheck:
+      test: ["CMD","curl","-f","http://localhost:8000/health"]
+      interval: 10s
+      retries: 10
+      start_period: 15s

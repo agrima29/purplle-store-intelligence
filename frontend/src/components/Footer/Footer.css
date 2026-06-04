@@ -1,0 +1,51 @@
+.footer {
+
+  margin-top: 80px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  color: rgba(255,255,255,0.75);
+
+  border-top:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.footer h3 {
+
+  margin-bottom: 10px;
+
+  color: white;
+}
+
+.tech-stack {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tech-stack span {
+
+  background:
+    rgba(255,255,255,0.08);
+
+  padding: 10px 15px;
+
+  border-radius: 999px;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.footer-copy {
+  font-size: 14px;
+}
