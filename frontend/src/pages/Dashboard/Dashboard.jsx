@@ -14,7 +14,6 @@ import "./Dashboard.css";
 
 export default function Dashboard() {
   const [metrics, setMetrics] = useState(null);
-  const [insights, setInsights] = useState(null);
   const [funnel, setFunnel] = useState(null);
 
   useEffect(() => {
@@ -31,7 +30,6 @@ export default function Dashboard() {
     
 
       setMetrics(metricsRes.data);
-      setInsights(insightsRes.data);
       setFunnel(funnelRes.data);
     } catch (err) {
       console.log(err);
