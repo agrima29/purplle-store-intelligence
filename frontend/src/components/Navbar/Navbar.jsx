@@ -8,14 +8,14 @@ export default function Navbar() {
     <nav className="navbar">
 
       <div className="navbar-left">
-
+{/* 
         <div className="logo-container">
           <img
             src="/Purplle-logo.png"
             alt="Purplle Logo"
             className="purplle-logo"
           />
-        </div>
+        </div> */}
 
         <div>
           <h1 className="navbar-title">
