@@ -24,7 +24,7 @@ export default function Dashboard() {
   const loadData = async () => {
     try {
       const metricsRes = await API.get("/metrics");
-      const insightsRes = await API.get("/insights");
+      
       const funnelRes = await API.get("/funnel");
 
     
