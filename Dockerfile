@@ -9,8 +9,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Download YOLOv8n model during build (requires internet at build time)
-RUN python -c "from ultralytics import YOLO; YOLO('yolov8n.pt')" && \
-    mv yolov8n.pt /app/yolov8n.pt
+RUN python -c "from ultralytics import YOLO; YOLO('yolov8n.pt')"
 
 COPY . .
 RUN mkdir -p data/videos data/sales data/outputs
