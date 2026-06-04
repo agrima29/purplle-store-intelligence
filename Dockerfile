@@ -8,8 +8,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Download YOLOv8n model during build (requires internet at build time)
 RUN python -c "from ultralytics import YOLO; YOLO('yolov8n.pt')"
 
 COPY . .
+
 RUN mkdir -p data/videos data/sales data/outputs
+
+EXPOSE 10000
+
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "10000"]
