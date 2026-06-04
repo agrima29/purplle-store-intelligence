@@ -1,38 +1,82 @@
 # Purplle Store Intelligence
 
-## Overview
+### Transforming Store Activity into Actionable Business Insights
 
-Purplle Store Intelligence is a retail analytics platform that transforms customer movement and sales activity into actionable business insights. The system combines computer vision, customer journey tracking, footfall analytics, conversion funnel analysis, and sales intelligence to help store managers make data-driven decisions.
+Purplle Store Intelligence is a retail analytics platform that combines computer vision, customer journey tracking, footfall analytics, conversion funnel analysis, and sales intelligence to help store managers make data-driven decisions.
 
-Built for the Purplle Tech Challenge.
+Built for the **Purplle Tech Challenge 2026**.
 
 ---
 
-## Features
+## 🚀 Live Demo
+
+### Frontend
+
+https://purplle-store-intelligence-three.vercel.app
+
+### Backend API
+
+https://purplle-store-intelligence-dlca.onrender.com
+
+### Source Code
+
+https://github.com/agrima29/purplle-store-intelligence
+
+---
+
+## 🎯 Problem Statement
+
+Retail stores generate large volumes of customer movement and sales data every day. However, store managers often lack visibility into:
+
+* Customer movement patterns
+* High-performing store zones
+* Conversion bottlenecks
+* Footfall trends
+* Salesperson effectiveness
+* Revenue-driving activities
+
+This leads to:
+
+* Missed revenue opportunities
+* Inefficient staffing decisions
+* Poor merchandising strategies
+* Limited understanding of customer behavior
+
+Purplle Store Intelligence addresses these challenges by converting raw customer and sales data into actionable business insights.
+
+---
+
+## 💡 Solution
+
+Purplle Store Intelligence provides a unified dashboard for:
 
 ### Customer Journey Tracking
 
 * Track customer movement across store zones
-* Reconstruct customer paths through the store
-* Analyze engagement with different departments
+* Reconstruct customer paths
+* Analyze engagement patterns
+* Monitor zone transitions
 
 ### Footfall Analytics
 
-* Monitor entries and exits
-* Calculate real-time occupancy
+* Track entries and exits
+* Measure real-time occupancy
 * Identify peak traffic periods
+* Calculate conversion rates
 
 ### Revenue Intelligence
 
 * Department-wise revenue analysis
 * Revenue distribution across store zones
-* Top-performing category identification
+* Identification of high-performing categories
+* Sales trend monitoring
 
 ### Conversion Funnel Analysis
 
-* Track customer progression from entry to purchase
+* Track customer progression through the store
 * Identify drop-off points
-* Measure conversion performance
+* Measure funnel performance
+* Improve conversion efficiency
 
 ### Business Insights Engine
 
@@ -43,27 +87,36 @@ Built for the Purplle Tech Challenge.
 
 ---
 
-## System Architecture
+## 🏗️ System Architecture
 
+```text
 Video Cameras
-→ YOLOv8 Person Detection
-→ ByteTrack Tracking
-→ Zone Mapping Engine
-→ SQLite Database
-→ FastAPI Backend
-→ React Dashboard
-→ Store Intelligence Insights
+        ↓
+YOLOv8 Person Detection
+        ↓
+ByteTrack Tracking
+        ↓
+Zone Mapping Engine
+        ↓
+SQLite Database
+        ↓
+FastAPI Backend
+        ↓
+React Dashboard
+        ↓
+Store Intelligence Insights
+```
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
 
 * React.js
 * Recharts
-* Framer Motion
 * Axios
+* Framer Motion
 
 ### Backend
 
@@ -87,7 +140,7 @@ Video Cameras
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 purplle-store-intelligence/
@@ -114,7 +167,9 @@ purplle-store-intelligence/
 └── README.md
 ```
 
-## API Endpoints
+---
+
+## 🔌 API Endpoints
 
 ### Metrics
 
@@ -128,7 +183,7 @@ GET /api/v1/metrics
 GET /api/v1/insights
 ```
 
-### Funnel
+### Conversion Funnel
 
 ```http
 GET /api/v1/funnel
@@ -148,12 +203,13 @@ GET /health
 
 ---
 
-## Local Setup
+## ⚙️ Local Setup
 
 ### Clone Repository
 
 ```bash
 git clone https://github.com/agrima29/purplle-store-intelligence.git
+
 cd purplle-store-intelligence
 ```
 
@@ -165,7 +221,7 @@ python -m venv venv
 
 ### Activate Environment
 
-Windows:
+#### Windows
 
 ```bash
 venv\Scripts\activate
@@ -183,7 +239,7 @@ pip install -r requirements.txt
 uvicorn api.main:app --reload
 ```
 
-Backend URL:
+Backend will run at:
 
 ```text
 http://127.0.0.1:8000
@@ -193,11 +249,13 @@ http://127.0.0.1:8000
 
 ```bash
 cd frontend
+
 npm install
+
 npm start
 ```
 
-Frontend URL:
+Frontend will run at:
 
 ```text
 http://localhost:3000
@@ -205,34 +263,49 @@ http://localhost:3000
 
 ---
 
-## Live Demo
-
-Frontend:
-https://purplle-store-intelligence-three.vercel.app
-
-Backend:
-https://purplle-store-intelligence-dlca.onrender.com
-
----
-
-## Business Impact
+## 📈 Business Impact
 
 Purplle Store Intelligence enables:
 
 * Better merchandising decisions
 * Improved workforce allocation
 * Enhanced customer journey visibility
+* Increased store efficiency
 * Higher conversion rates
 * Data-driven retail operations
 
-By converting raw customer movement and sales data into actionable recommendations, the platform helps retail managers optimize store performance and improve business outcomes.
+By transforming raw customer movement and sales data into actionable recommendations, the platform helps retail managers optimize store performance and improve business outcomes.
 
 ---
 
-## Author
+## 🎥 Submission Assets
 
-Agrima Singh
+### Live Application
 
-B.Tech Computer Science
+https://purplle-store-intelligence-three.vercel.app
 
-Built for the Purplle Tech Challenge.
+### Backend API
+
+https://purplle-store-intelligence-dlca.onrender.com
+
+### GitHub Repository
+
+https://github.com/agrima29/purplle-store-intelligence
+
+---
+
+## 👩‍💻 Author
+
+**Agrima Singh**
+
+B.Tech Computer Science Engineering
+
+Hackathon Submission – Purplle Tech Challenge 2026
+
+Focused on customer journey analytics, footfall intelligence, conversion tracking, and revenue-driven retail insights.
+
+---
+
+## 🙏 Thank You
+
+Purplle Store Intelligence demonstrates how computer vision and retail analytics can transform in-store activity into meaningful business intelligence, enabling smarter operational and merchandising decisions.
